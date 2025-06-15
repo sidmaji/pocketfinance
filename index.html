@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Pockfin - Pocket Finance, Powerful Futures</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <!-- Navigation -->
+        <nav class="navbar" id="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h2>Pockfin</h2>
+                </div>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#features" class="nav-link">Features</a></li>
+                    <li><a href="#demo" class="nav-link">Demo</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Pocket Finance, Powerful Futures</h1>
+                    <p class="hero-subtitle">Learn personal finance skills for all ages. Beginner-friendly lessons for everyone, plus advanced, feature-packed simulations for adults.</p>
+                    <button class="cta-button" onclick="scrollToSection('demo')">Start Learning Today</button>
+                </div>
+                <div class="hero-visual">
+                    <div class="hero-card" id="hero-card">
+                        <div class="card-header">
+                            <h3>Investment Growth</h3>
+                            <span class="status-positive">Projection</span>
+                        </div>
+                        <div class="investment-preview">
+                            <div class="investment-item">
+                                <span>Initial Investment</span>
+                                <span class="positive">$5,000</span>
+                            </div>
+                            <div class="investment-item">
+                                <span>Monthly Contribution</span>
+                                <span class="positive">$200</span>
+                            </div>
+                            <div class="investment-item">
+                                <span>Years</span>
+                                <span>20</span>
+                            </div>
+                            <div class="investment-item">
+                                <span>Estimated Return</span>
+                                <span>7%/yr</span>
+                            </div>
+                            <div class="investment-item total">
+                                <span>Projected Value</span>
+                                <span class="positive">$109,000</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Why Choose Pockfin?</h2>
+                    <p>Interactive tools and real-world simulations to build financial confidence</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <span class="icon icon-budget"></span>
+                        <h3>Interactive Budgeting</h3>
+                        <p>Learn to track income and expenses with our intuitive budget calculator and get personalized spending insights.</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="icon icon-career"></span>
+                        <h3>Career Simulations</h3>
+                        <p>Explore different career paths and understand how education choices impact future earning potential.</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="icon icon-challenge"></span>
+                        <h3>Financial Challenges</h3>
+                        <p>Complete gamified challenges to learn about saving, investing, and making smart financial decisions.</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="icon icon-mobile"></span>
+                        <h3>Mobile Friendly</h3>
+                        <p>Access lessons and tools anywhere, anytime. Perfect for learning on-the-go between classes or work.</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="icon icon-peer"></span>
+                        <h3>Peer Learning</h3>
+                        <p>Connect with others, share tips, and learn from real experiences in a safe environment.</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="icon icon-progress"></span>
+                        <h3>Progress Tracking</h3>
+                        <p>Monitor your financial literacy journey with detailed progress reports and achievement badges.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Demo Section -->
+        <section id="demo" class="demo">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Try Our Budget Calculator</h2>
+                    <p>Experience our interactive tools with this simple budget planner</p>
+                </div>
+                <div class="demo-content">
+                    <div class="calculator-card">
+                        <h3>Investment Growth Calculator</h3>
+                        <form id="budget-form" class="budget-form">
+                            <div class="input-group">
+                                <label for="initial">Initial Investment ($)</label>
+                                <input type="number" id="initial" placeholder="e.g. 5000" min="0" step="0.01" />
+                            </div>
+                            <div class="input-group">
+                                <label for="monthly">Monthly Contribution ($)</label>
+                                <input type="number" id="monthly" placeholder="e.g. 200" min="0" step="0.01" />
+                            </div>
+                            <div class="input-group">
+                                <label for="years">Years</label>
+                                <input type="number" id="years" placeholder="e.g. 20" min="1" step="1" />
+                            </div>
+                            <div class="input-group">
+                                <label for="rate">Estimated Annual Return (%)</label>
+                                <input type="number" id="rate" placeholder="e.g. 7" min="0" step="0.01" />
+                            </div>
+                            <button type="submit" class="calculate-btn">Calculate Investment</button>
+                        </form>
+                    </div>
+
+                    <div class="results-card" id="results-card" style="display: none">
+                        <h3>Your Investment Summary</h3>
+                        <div class="result-item">
+                            <span>Initial Investment:</span>
+                            <span id="total-income" class="positive">$0</span>
+                        </div>
+                        <div class="result-item">
+                            <span>Total Contributions:</span>
+                            <span id="total-expenses" class="positive">$0</span>
+                        </div>
+                        <div class="result-item balance">
+                            <span>Projected Value:</span>
+                            <span id="balance">$0</span>
+                        </div>
+                        <div class="suggestions" id="suggestions">
+                            <!-- Suggestions will be populated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="section-header">
+                    <h2>About Our Team</h2>
+                    <p>Passionate educators and finance experts committed to student success</p>
+                </div>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <div class="member-avatar">SM</div>
+                        <h3>Sriram Mupparapu</h3>
+                        <p class="member-role">High School Senior</p>
+                        <p>Passionate about making financial education accessible and engaging for all ages.</p>
+                    </div>
+                    <div class="team-member">
+                        <div class="member-avatar">SM</div>
+                        <h3>Siddhant Maji</h3>
+                        <p class="member-role">High School Senior</p>
+                        <p>Focused on building powerful, user-friendly simulations for advanced personal finance learning.</p>
+                    </div>
+                    <div class="team-member">
+                        <div class="member-avatar">TM</div>
+                        <h3>Toyeshh Medikonda</h3>
+                        <p class="member-role">High School Senior</p>
+                        <p>Dedicated to creating a platform that empowers users to take control of their financial future.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer id="contact" class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h3>Pockfin</h3>
+                        <p>Pocket Finance, Powerful Futures - Empowering the next generation with essential financial skills.</p>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#features">Features</a></li>
+                            <li><a href="#demo">Demo</a></li>
+                            <li><a href="#about">About</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="#">Getting Started</a></li>
+                            <li><a href="#">Help Center</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Contact</h4>
+                        <ul>
+                            <li>support@pockfin.com</li>
+                            <li>(555) 123-4567</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 Pockfin. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+        <script src="script.js"></script>
+    </body>
+</html>
