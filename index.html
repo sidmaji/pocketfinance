@@ -6,23 +6,43 @@
         <title>Pockfin - Pocket Finance, Powerful Futures</title>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-        <link rel="stylesheet" href="style.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="styles/main.css" />
+        <link rel="stylesheet" href="styles/components.css" />
+        <link rel="stylesheet" href="styles/animations.css" />
     </head>
     <body>
-        <!-- Navigation -->
-        <nav class="navbar" id="navbar">
+        <nav class="navbar glass-effect" id="navbar">
             <div class="nav-container">
                 <div class="nav-logo">
+                    <div class="logo-icon"></div>
                     <h2>Pockfin</h2>
                 </div>
                 <ul class="nav-menu" id="nav-menu">
                     <li><a href="#home" class="nav-link">Home</a></li>
                     <li><a href="#features" class="nav-link">Features</a></li>
-                    <li><a href="#demo" class="nav-link">Demo</a></li>
+                    <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
                     <li><a href="#about" class="nav-link">About</a></li>
-                    <li><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
+                <div class="nav-actions">
+                    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                        <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                        <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                    </button>
+                    <button class="cta-button primary">Start Free Trial</button>
+                </div>
                 <div class="hamburger" id="hamburger">
                     <span></span>
                     <span></span>
@@ -31,40 +51,177 @@
             </div>
         </nav>
 
-        <!-- Hero Section -->
-        <section id="home" class="hero">
+        <section id="home" class="hero-section">
+            <div class="hero-background"></div>
             <div class="container">
                 <div class="hero-content">
-                    <h1 class="hero-title">Pocket Finance, Powerful Futures</h1>
-                    <p class="hero-subtitle">Learn personal finance skills for all ages. Beginner-friendly lessons for everyone, plus advanced, feature-packed simulations for adults.</p>
-                    <button class="cta-button" onclick="scrollToSection('demo')">Start Learning Today</button>
-                </div>
-                <div class="hero-visual">
-                    <div class="hero-card" id="hero-card">
-                        <div class="card-header">
-                            <h3>Investment Growth</h3>
-                            <span class="status-positive">Projection</span>
+                    <div class="hero-text fade-in-up">
+                        <div class="hero-badge">
+                            <svg class="hero-badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                                <path d="M2 17l10 5 10-5"></path>
+                                <path d="M2 12l10 5 10-5"></path>
+                            </svg>
+                            <span>A personal finance app built with you in mind</span>
                         </div>
-                        <div class="investment-preview">
-                            <div class="investment-item">
-                                <span>Initial Investment</span>
-                                <span class="positive">$5,000</span>
+                        <h1 class="hero-title">Pocket Finance, <span class="gradient-text">Powerful Futures</span></h1>
+                        <p class="hero-subtitle">
+                            Get personalized, AI-powered insights into your finances. Track all your accounts, credit cards, spending, income, and budgets in one intuitive place. Perfect for students,
+                            professionals, and everyone in between.
+                        </p>
+                        <div class="hero-actions">
+                            <button class="cta-button primary large">Start Free Trial</button>
+                            <button class="cta-button secondary large">Watch Demo</button>
+                        </div>
+                        <div class="hero-trust">
+                            <span>7-day free trial • No credit card required</span>
+                        </div>
+                    </div>
+                    <div class="hero-visual fade-in-right">
+                        <div class="hero-image-placeholder">
+                            <div class="mockup-frame tilt-card" id="tilt-card">
+                                <div class="mockup-screen">
+                                    <div class="app-preview">
+                                        <div class="preview-header">
+                                            <div class="user-greeting">
+                                                <span>Hey, Sarah!</span>
+                                                <svg class="greeting-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                                    <circle cx="12" cy="7" r="4"></circle>
+                                                </svg>
+                                            </div>
+                                            <div class="notification-bell">
+                                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                                    <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                                                    <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="balance-cards">
+                                            <div class="balance-card primary">
+                                                <span class="balance-label">Total Balance</span>
+                                                <span class="balance-amount">$12,847</span>
+                                                <span class="balance-change positive">+8.4% this month</span>
+                                            </div>
+                                            <div class="balance-card secondary">
+                                                <span class="balance-label">Savings Goal</span>
+                                                <span class="balance-amount">$8,200</span>
+                                                <div class="progress-mini">
+                                                    <div class="progress-fill-mini" style="width: 68%"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="quick-actions">
+                                            <div class="action-btn">
+                                                <svg class="action-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                                    <line x1="12" y1="1" x2="12" y2="23"></line>
+                                                    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                                                </svg>
+                                                <span>Invest</span>
+                                            </div>
+                                            <div class="action-btn">
+                                                <svg class="action-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                                    <path d="M3 3v5h5"></path>
+                                                    <path d="M3 21v-6h6"></path>
+                                                    <path d="M21 3v6h-6"></path>
+                                                    <path d="M21 21v-5h-5"></path>
+                                                </svg>
+                                                <span>Budget</span>
+                                            </div>
+                                            <div class="action-btn">
+                                                <svg class="action-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                                    <circle cx="12" cy="12" r="10"></circle>
+                                                    <circle cx="12" cy="12" r="6"></circle>
+                                                    <circle cx="12" cy="12" r="2"></circle>
+                                                </svg>
+                                                <span>Goals</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="investment-item">
-                                <span>Monthly Contribution</span>
-                                <span class="positive">$200</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="trusted-by">
+                <div class="container">
+                    <p class="trusted-title">Trusted by students and professionals at</p>
+                    <div class="trust-logos">
+                        <div class="trust-logo">Harvard</div>
+                        <div class="trust-logo">Stanford</div>
+                        <div class="trust-logo">MIT</div>
+                        <div class="trust-logo">Google</div>
+                        <div class="trust-logo">Microsoft</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="smart-insights-section">
+            <div class="container">
+                <div class="insights-content">
+                    <div class="insights-text fade-in-left">
+                        <h2>
+                            Save more money with <span class="gradient-text">Pockfin</span>
+                            <svg class="insights-title-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M9 11H5a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h4v-7zM19 11h-4v7h4a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2z"></path>
+                                <path d="M10 11V9a2 2 0 1 1 4 0v2"></path>
+                            </svg>
+                        </h2>
+                        <p>Pockfin spots cash you're wasting and shows you how to keep more of what you earn. Average users save $100-$200 monthly—without breaking a sweat.</p>
+                        <div class="insights-features">
+                            <div class="insight-item">
+                                <svg class="insight-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M12 2a3 3 0 0 0-3 3c0 1.5 1.5 3 3 3s3-1.5 3-3a3 3 0 0 0-3-3z"></path>
+                                    <path d="M21 9v6h-6V9"></path>
+                                    <path d="M3 9v6h6V9"></path>
+                                </svg>
+                                <span>Smart insights. Real savings. Zero stress.</span>
                             </div>
-                            <div class="investment-item">
-                                <span>Years</span>
-                                <span>20</span>
+                            <div class="insight-item">
+                                <svg class="insight-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <circle cx="12" cy="12" r="5"></circle>
+                                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                </svg>
+                                <span>Pockfin is your wallet's best friend.</span>
                             </div>
-                            <div class="investment-item">
-                                <span>Estimated Return</span>
-                                <span>7%/yr</span>
+                        </div>
+                        <button class="cta-button primary">Start Your Free Trial →</button>
+                    </div>
+                    <div class="insights-visual fade-in-right">
+                        <div class="nudge-card glass-card">
+                            <div class="nudge-header">
+                                <div class="nudge-logo">
+                                    <svg class="nudge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <circle cx="12" cy="12" r="6"></circle>
+                                        <circle cx="12" cy="12" r="2"></circle>
+                                    </svg>
+                                    <span>Pockfin</span>
+                                </div>
                             </div>
-                            <div class="investment-item total">
-                                <span>Projected Value</span>
-                                <span class="positive">$109,000</span>
+                            <div class="insight-section">
+                                <div class="insight-section-header">
+                                    <svg class="insight-section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <circle cx="12" cy="12" r="5"></circle>
+                                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                                    </svg>
+                                    <h4>Investment Insights</h4>
+                                </div>
+                                <p>Consider diversifying your portfolio with emerging market funds for better returns.</p>
+                            </div>
+                            <div class="insight-section">
+                                <div class="insight-section-header">
+                                    <svg class="insight-section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <line x1="12" y1="1" x2="12" y2="23"></line>
+                                        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                                    </svg>
+                                    <h4>Savings That Work</h4>
+                                </div>
+                                <p>Set aside the $88.90 in received transfers into an emergency fund for better financial security.</p>
                             </div>
                         </div>
                     </div>
@@ -72,170 +229,410 @@
             </div>
         </section>
 
-        <!-- Features Section -->
-        <section id="features" class="features">
+        <section id="features" class="features-section">
             <div class="container">
-                <div class="section-header">
-                    <h2>Why Choose Pockfin?</h2>
-                    <p>Interactive tools and real-world simulations to build financial confidence</p>
+                <div class="section-header fade-in-up">
+                    <h2>Complete <span class="gradient-text">Financial</span> Ecosystem</h2>
+                    <p>Everything you need to master personal finance, from education to advanced simulations</p>
                 </div>
+
                 <div class="features-grid">
-                    <div class="feature-card">
-                        <span class="icon icon-budget"></span>
-                        <h3>Interactive Budgeting</h3>
-                        <p>Learn to track income and expenses with our intuitive budget calculator and get personalized spending insights.</p>
+                    <div class="feature-showcase glass-card fade-in-up">
+                        <div class="feature-image-placeholder">
+                            <div class="feature-mockup simulation">
+                                <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M3 3v5h5"></path>
+                                    <path d="M3 21v-6h6"></path>
+                                    <path d="M21 3v6h-6"></path>
+                                    <path d="M21 21v-5h-5"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="feature-content">
+                            <h3>Interactive Financial Simulations</h3>
+                            <p>
+                                Experience real-world financial scenarios in a risk-free environment. Practice making investment decisions, managing debt, and planning for major life events with our
+                                advanced simulation engine.
+                            </p>
+                            <ul class="feature-benefits">
+                                <li>Virtual trading with real market data</li>
+                                <li>Life event simulations (buying a house, starting a family)</li>
+                                <li>Risk-free learning environment</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="feature-card">
-                        <span class="icon icon-career"></span>
-                        <h3>Career Simulations</h3>
-                        <p>Explore different career paths and understand how education choices impact future earning potential.</p>
+
+                    <div class="feature-showcase glass-card fade-in-up">
+                        <div class="feature-content">
+                            <h3>AI-Powered Investment Sandbox</h3>
+                            <p>
+                                Practice investing strategies with virtual funds and get AI-powered insights. Track your performance, learn from mistakes, and build confidence before investing real
+                                money.
+                            </p>
+                            <ul class="feature-benefits">
+                                <li>$100,000 virtual portfolio to start</li>
+                                <li>Real-time market data and analysis</li>
+                                <li>Performance tracking and insights</li>
+                            </ul>
+                        </div>
+                        <div class="feature-image-placeholder">
+                            <div class="feature-mockup investment">
+                                <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <line x1="12" y1="20" x2="12" y2="10"></line>
+                                    <line x1="18" y1="20" x2="18" y2="4"></line>
+                                    <line x1="6" y1="20" x2="6" y2="16"></line>
+                                </svg>
+                            </div>
+                        </div>
                     </div>
-                    <div class="feature-card">
-                        <span class="icon icon-challenge"></span>
-                        <h3>Financial Challenges</h3>
-                        <p>Complete gamified challenges to learn about saving, investing, and making smart financial decisions.</p>
+
+                    <div class="feature-showcase glass-card fade-in-up">
+                        <div class="feature-image-placeholder">
+                            <div class="feature-mockup education">
+                                <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                                    <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="feature-content">
+                            <h3>Comprehensive Financial Education</h3>
+                            <p>From K-12 lessons to advanced adult courses, we cover everything. Interactive modules, gamified challenges, and personalized learning paths for every age group.</p>
+                            <ul class="feature-benefits">
+                                <li>Age-appropriate content for all levels</li>
+                                <li>Gamified learning experience</li>
+                                <li>Progress tracking and certificates</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="feature-card">
-                        <span class="icon icon-mobile"></span>
-                        <h3>Mobile Friendly</h3>
-                        <p>Access lessons and tools anywhere, anytime. Perfect for learning on-the-go between classes or work.</p>
+
+                    <div class="feature-showcase glass-card fade-in-up">
+                        <div class="feature-content">
+                            <h3>Smart Budgeting & Expense Tracking</h3>
+                            <p>Connect your accounts securely and let AI categorize your spending. Get personalized insights, set smart goals, and receive alerts before you overspend.</p>
+                            <ul class="feature-benefits">
+                                <li>Automatic transaction categorization</li>
+                                <li>Smart spending alerts and recommendations</li>
+                                <li>Goal-based budget planning</li>
+                            </ul>
+                        </div>
+                        <div class="feature-image-placeholder">
+                            <div class="feature-mockup budgeting">
+                                <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <line x1="12" y1="1" x2="12" y2="23"></line>
+                                    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                                </svg>
+                            </div>
+                        </div>
                     </div>
-                    <div class="feature-card">
-                        <span class="icon icon-peer"></span>
-                        <h3>Peer Learning</h3>
-                        <p>Connect with others, share tips, and learn from real experiences in a safe environment.</p>
+
+                    <div class="feature-showcase glass-card fade-in-up">
+                        <div class="feature-image-placeholder">
+                            <div class="feature-mockup ai-advisor">
+                                <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                                    <circle cx="12" cy="12" r="4"></circle>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="feature-content">
+                            <h3>AI Financial Advisor</h3>
+                            <p>Personal AI assistant that learns your habits and provides 24/7 financial guidance tailored to your goals. Get instant answers and personalized recommendations.</p>
+                            <ul class="feature-benefits">
+                                <li>Personalized financial recommendations</li>
+                                <li>24/7 availability for instant guidance</li>
+                                <li>Learn from your spending patterns</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="feature-card">
-                        <span class="icon icon-progress"></span>
-                        <h3>Progress Tracking</h3>
-                        <p>Monitor your financial literacy journey with detailed progress reports and achievement badges.</p>
+
+                    <div class="feature-showcase glass-card fade-in-up">
+                        <div class="feature-content">
+                            <h3>Mobile App</h3>
+                            <p>Take Pockfin everywhere with our native iOS and Android apps featuring offline capabilities, smart notifications, and seamless synchronization across all devices.</p>
+                            <ul class="feature-benefits">
+                                <li>Native iOS and Android apps</li>
+                                <li>Offline capabilities for uninterrupted access</li>
+                                <li>Smart notifications and reminders</li>
+                            </ul>
+                        </div>
+                        <div class="feature-image-placeholder">
+                            <div class="feature-mockup mobile">
+                                <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                                    <line x="12" y="18" x2="12.01" y2="18"></line>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="feature-showcase glass-card fade-in-up">
+                        <div class="feature-image-placeholder">
+                            <div class="feature-mockup family">
+                                <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="9" cy="7" r="4"></circle>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="feature-content">
+                            <h3>Family Accounts</h3>
+                            <p>Manage finances for the whole family with shared goals, allowances, and educational tools for kids. Build financial literacy across generations.</p>
+                            <ul class="feature-benefits">
+                                <li>Shared family financial goals</li>
+                                <li>Kids' allowance and savings tracking</li>
+                                <li>Age-appropriate educational content</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Demo Section -->
-        <section id="demo" class="demo">
+        <section class="bank-partners-section">
             <div class="container">
-                <div class="section-header">
-                    <h2>Try Our Budget Calculator</h2>
-                    <p>Experience our interactive tools with this simple budget planner</p>
-                </div>
-                <div class="demo-content">
-                    <div class="calculator-card">
-                        <h3>Investment Growth Calculator</h3>
-                        <form id="budget-form" class="budget-form">
-                            <div class="input-group">
-                                <label for="initial">Initial Investment ($)</label>
-                                <input type="number" id="initial" placeholder="e.g. 5000" min="0" step="0.01" />
-                            </div>
-                            <div class="input-group">
-                                <label for="monthly">Monthly Contribution ($)</label>
-                                <input type="number" id="monthly" placeholder="e.g. 200" min="0" step="0.01" />
-                            </div>
-                            <div class="input-group">
-                                <label for="years">Years</label>
-                                <input type="number" id="years" placeholder="e.g. 20" min="1" step="1" />
-                            </div>
-                            <div class="input-group">
-                                <label for="rate">Estimated Annual Return (%)</label>
-                                <input type="number" id="rate" placeholder="e.g. 7" min="0" step="0.01" />
-                            </div>
-                            <button type="submit" class="calculate-btn">Calculate Investment</button>
-                        </form>
+                <div class="partners-content fade-in-up">
+                    <h2>Connect Seamlessly with Your Trusted Bank Partners</h2>
+                    <div class="bank-logos">
+                        <div class="bank-logo">Chase</div>
+                        <div class="bank-logo">Bank of America</div>
+                        <div class="bank-logo">Wells Fargo</div>
+                        <div class="bank-logo">Citibank</div>
+                        <div class="bank-logo">Capital One</div>
+                        <div class="bank-logo">+500 more</div>
                     </div>
-
-                    <div class="results-card" id="results-card" style="display: none">
-                        <h3>Your Investment Summary</h3>
-                        <div class="result-item">
-                            <span>Initial Investment:</span>
-                            <span id="total-income" class="positive">$0</span>
-                        </div>
-                        <div class="result-item">
-                            <span>Total Contributions:</span>
-                            <span id="total-expenses" class="positive">$0</span>
-                        </div>
-                        <div class="result-item balance">
-                            <span>Projected Value:</span>
-                            <span id="balance">$0</span>
-                        </div>
-                        <div class="suggestions" id="suggestions">
-                            <!-- Suggestions will be populated by JavaScript -->
-                        </div>
-                    </div>
+                    <p>Bank-level security with 256-bit encryption. Your data is read-only and always protected.</p>
                 </div>
             </div>
         </section>
 
-        <!-- About Section -->
-        <section id="about" class="about">
+        <section id="how-it-works" class="how-it-works-section">
             <div class="container">
-                <div class="section-header">
-                    <h2>About Our Team</h2>
-                    <p>Passionate educators and finance experts committed to student success</p>
+                <div class="section-header fade-in-up">
+                    <h2>How It Works</h2>
+                    <p>Effortlessly Track, Manage, and Optimize Your Finances with Pockfin</p>
                 </div>
-                <div class="team-grid">
-                    <div class="team-member">
-                        <div class="member-avatar">SM</div>
-                        <h3>Sriram Mupparapu</h3>
-                        <p class="member-role">High School Senior</p>
-                        <p>Passionate about making financial education accessible and engaging for all ages.</p>
+
+                <div class="steps-grid">
+                    <div class="step-card glass-card fade-in-up">
+                        <div class="step-number">1</div>
+                        <h3>Sign Up</h3>
+                        <p>Create your free account in under 2 minutes. No credit card required for your 7-day trial.</p>
+                        <div class="step-visual signup">
+                            <svg class="step-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+                                <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+                            </svg>
+                        </div>
                     </div>
-                    <div class="team-member">
-                        <div class="member-avatar">SM</div>
-                        <h3>Siddhant Maji</h3>
-                        <p class="member-role">High School Senior</p>
-                        <p>Focused on building powerful, user-friendly simulations for advanced personal finance learning.</p>
+
+                    <div class="step-card glass-card fade-in-up">
+                        <div class="step-number">2</div>
+                        <h3>Link Accounts</h3>
+                        <p>Securely connect your bank accounts, credit cards, and investment accounts through our trusted partners.</p>
+                        <div class="step-visual link-accounts">
+                            <svg class="step-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                            </svg>
+                        </div>
                     </div>
-                    <div class="team-member">
-                        <div class="member-avatar">TM</div>
-                        <h3>Toyeshh Medikonda</h3>
-                        <p class="member-role">High School Senior</p>
-                        <p>Dedicated to creating a platform that empowers users to take control of their financial future.</p>
+
+                    <div class="step-card glass-card fade-in-up">
+                        <div class="step-number">3</div>
+                        <h3>Set Your Goals</h3>
+                        <p>Define your financial objectives and let our AI create a personalized plan to achieve them.</p>
+                        <div class="step-visual set-goals">
+                            <svg class="step-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <circle cx="12" cy="12" r="6"></circle>
+                                <circle cx="12" cy="12" r="2"></circle>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="step-card glass-card fade-in-up">
+                        <div class="step-number">4</div>
+                        <h3>Track Progress</h3>
+                        <p>Monitor your journey with real-time insights, smart recommendations, and celebration milestones.</p>
+                        <div class="step-visual track-progress">
+                            <svg class="step-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <polyline points="22,6 12,16 2,6"></polyline>
+                                <path d="M16 16v4a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-4"></path>
+                                <path d="M22 16v4a2 2 0 0 1-2 2h-4"></path>
+                                <path d="M2 16v4a2 2 0 0 0 2 2h4"></path>
+                            </svg>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Footer -->
-        <footer id="contact" class="footer">
+        <section class="security-section">
+            <div class="container">
+                <div class="security-content">
+                    <div class="security-text fade-in-left">
+                        <h2>How do I know my data is safe?</h2>
+                        <p>
+                            Pockfin is a read-only platform that prevents trading, fund withdrawals, and transfers to keep your money secure. When you connect your bank accounts via Plaid, you control
+                            what data is shared. You can also delete your account anytime, ensuring your information remains private.
+                        </p>
+                        <div class="security-features">
+                            <div class="security-item">
+                                <svg class="security-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                    <circle cx="12" cy="16" r="1"></circle>
+                                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                                </svg>
+                                <span>256-bit bank-level encryption</span>
+                            </div>
+                            <div class="security-item">
+                                <svg class="security-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                </svg>
+                                <span>Read-only access to your accounts</span>
+                            </div>
+                            <div class="security-item">
+                                <svg class="security-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M9 12l2 2 4-4"></path>
+                                    <path d="M21 12c-1 0-3-1-3-3s2-3 3-3 3 1 3 3-2 3-3 3"></path>
+                                    <path d="M3 12c1 0 3-1 3-3s-2-3-3-3-3 1-3 3 2 3 3 3"></path>
+                                    <path d="M12 3c0 1-1 3-3 3s-3-2-3-3 1-3 3-3 3 2 3 3"></path>
+                                </svg>
+                                <span>SOC 2 Type II certified</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="security-visual fade-in-right">
+                        <div class="security-shield">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                <path d="M9 12l2 2 4-4"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content fade-in-up">
+                    <div class="cta-text">
+                        <h2>Change your relationship with money</h2>
+                        <p>
+                            Pockfin isn't just another finance app, it's like having your own personal money coach. It makes managing your finances super easy, from tracking spending to setting goals
+                            and building better habits. With simple, smart tools, Pockfin helps you take control of your money and stay on track, so you can focus on reaching your goals without the
+                            stress.
+                        </p>
+                        <div class="cta-actions">
+                            <button class="cta-button primary large">Start Your Free Trial →</button>
+                            <p class="cta-subtext">Join thousands of users who've transformed their financial future</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <div class="section-background texture-dots"></div>
+            <div class="container">
+                <div class="section-header fade-in-up">
+                    <h2>Meet Our <span class="gradient-text">Team</span></h2>
+                    <p>High school co-founders passionate about democratizing financial education</p>
+                </div>
+
+                <div class="team-container">
+                    <div class="team-member glass-card fade-in-up">
+                        <div class="member-avatar gradient-bg">SM</div>
+                        <div class="member-info">
+                            <h3>Sriram Mupparapu</h3>
+                            <p class="member-role">Co-Founder</p>
+                            <p class="member-bio">
+                                Passionate high school senior focused on creating accessible financial education tools that empower users of all ages to build wealth and make informed financial
+                                decisions.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="team-member glass-card fade-in-up">
+                        <div class="member-avatar gradient-bg">SM</div>
+                        <div class="member-info">
+                            <h3>Siddhant Maji</h3>
+                            <p class="member-role">Co-Founder</p>
+                            <p class="member-bio">
+                                High school senior dedicated to building powerful simulation engines and AI-driven insights that make advanced personal finance learning accessible to everyone.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="team-member glass-card fade-in-up">
+                        <div class="member-avatar gradient-bg">TM</div>
+                        <div class="member-info">
+                            <h3>Toyeshh Medikonda</h3>
+                            <p class="member-role">Co-Founder</p>
+                            <p class="member-bio">High school senior designing intuitive experiences that make complex financial concepts easy to understand and apply in real-world situations.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
             <div class="container">
                 <div class="footer-content">
-                    <div class="footer-section">
-                        <h3>Pockfin</h3>
-                        <p>Pocket Finance, Powerful Futures - Empowering the next generation with essential financial skills.</p>
+                    <div class="footer-brand">
+                        <div class="footer-logo">
+                            <div class="logo-icon"></div>
+                            <h3>Pockfin</h3>
+                        </div>
+                        <p>Pocket Finance, Powerful Futures</p>
+                        <p>Our team is ready to assist you on your financial journey.</p>
+                        <a href="mailto:hello@pockfin.com" class="footer-email">hello@pockfin.com</a>
                     </div>
-                    <div class="footer-section">
-                        <h4>Quick Links</h4>
-                        <ul>
-                            <li><a href="#home">Home</a></li>
-                            <li><a href="#features">Features</a></li>
-                            <li><a href="#demo">Demo</a></li>
-                            <li><a href="#about">About</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-section">
-                        <h4>Resources</h4>
-                        <ul>
-                            <li><a href="#">Getting Started</a></li>
-                            <li><a href="#">Help Center</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Terms of Service</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-section">
-                        <h4>Contact</h4>
-                        <ul>
-                            <li>support@pockfin.com</li>
-                            <li>(555) 123-4567</li>
-                        </ul>
+
+                    <div class="footer-links">
+                        <div class="link-group">
+                            <h4>Platform</h4>
+                            <ul>
+                                <li><a href="#features">Features</a></li>
+                                <li><a href="#how-it-works">How It Works</a></li>
+                                <li><a href="#about">About</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="link-group">
+                            <h4>Security</h4>
+                            <ul>
+                                <li><a href="#">Security Overview</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Terms of Service</a></li>
+                                <li><a href="#">Data Protection</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="link-group">
+                            <h4>Support</h4>
+                            <ul>
+                                <li><a href="#">Help Center</a></li>
+                                <li><a href="#">Contact Support</a></li>
+                                <li><a href="#">Community</a></li>
+                                <li><a href="#">Status</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
+
                 <div class="footer-bottom">
-                    <p>&copy; 2025 Pockfin. All rights reserved.</p>
+                    <p>&copy; 2025 Pockfin. All rights reserved. Privacy & Terms.</p>
                 </div>
             </div>
         </footer>
-        <script src="script.js"></script>
+
+        <script src="scripts/main.js"></script>
+        <script src="scripts/animations.js"></script>
+        <script src="scripts/theme.js"></script>
     </body>
 </html>
