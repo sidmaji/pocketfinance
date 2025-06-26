@@ -1,0 +1,23 @@
+{
+    "name": "PocketFin - Personal Finance Education",
+    "short_name": "PocketFin",
+    "description": "Powerful personal finance simulations and literacy for all ages",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#8b5cf6",
+    "icons": [
+        {
+            "src": "/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "categories": ["finance", "education", "productivity"],
+    "lang": "en"
+}

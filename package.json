@@ -1,0 +1,41 @@
+{
+    "name": "pocketfin",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint",
+        "export": "next build && next export",
+        "deploy": "npm run export && firebase deploy",
+        "deploy:hosting": "firebase deploy --only hosting"
+    },
+    "dependencies": {
+        "@hookform/resolvers": "^3.3.2",
+        "@tailwindcss/forms": "^0.5.7",
+        "@types/node": "^20.0.0",
+        "@types/react": "^18.0.0",
+        "@types/react-dom": "^18.0.0",
+        "autoprefixer": "^10.4.16",
+        "class-variance-authority": "^0.7.0",
+        "clsx": "^2.0.0",
+        "firebase": "^10.7.1",
+        "framer-motion": "^10.16.5",
+        "lucide-react": "^0.294.0",
+        "next": "^15.3.4",
+        "postcss": "^8.4.32",
+        "react": "^18.0.0",
+        "react-dom": "^18.0.0",
+        "react-hook-form": "^7.48.2",
+        "recharts": "^2.8.0",
+        "tailwindcss": "^3.3.6",
+        "typescript": "^5.0.0",
+        "zod": "^3.22.4",
+        "react-icons": "^4.12.0"
+    },
+    "devDependencies": {
+        "eslint": "^8.0.0",
+        "eslint-config-next": "15.0.0"
+    }
+}

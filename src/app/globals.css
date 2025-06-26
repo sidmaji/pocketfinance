@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        @apply bg-gray-50 text-gray-900;
+    }
+}
+
+@layer components {
+    .btn-primary {
+        @apply bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-200 hover:scale-105 hover:shadow-lg hover:from-emerald-700 hover:to-teal-700;
+    }
+
+    .btn-secondary {
+        @apply bg-white text-gray-700 border border-gray-300 px-6 py-3 rounded-lg font-semibold transition-all duration-200 hover:bg-gray-50 hover:shadow-md;
+    }
+
+    .card {
+        @apply bg-white rounded-xl shadow-lg p-6 transition-all duration-200 hover:shadow-xl;
+    }
+
+    .gradient-text {
+        @apply bg-gradient-to-r from-emerald-700 to-teal-700 bg-clip-text text-transparent;
+    }
+}
+
+@layer utilities {
+    .animate-gradient-x {
+        background-size: 400% 400%;
+        animation: gradient-x 15s ease infinite;
+    }
+
+    .animate-gradient-xy {
+        background-size: 400% 400%;
+        animation: gradient-xy 10s ease infinite;
+    }
+
+    @keyframes gradient-x {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
+    @keyframes gradient-xy {
+        0% {
+            background-position: 0% 0%;
+        }
+        25% {
+            background-position: 100% 0%;
+        }
+        50% {
+            background-position: 100% 100%;
+        }
+        75% {
+            background-position: 0% 100%;
+        }
+        100% {
+            background-position: 0% 0%;
+        }
+    }
+}
