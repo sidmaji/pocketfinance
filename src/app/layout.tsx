@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ['latin'], display: 'swap' })
 export const metadata: Metadata = {
     title: 'PockFin - Personal Finance Simulation & Education',
     description: 'Powerful personal finance simulations and literacy for all ages. Learn through interactive experiences, plan major life events, and build wealth confidently.',
-    keywords: 'finance, education, simulation, investment, budgeting, financial literacy, personal finance, retirement planning',
+    keywords: 'finance, education, simulation, investment, budgeting, financial literacy, personal finance, retirement planning, pocket',
     authors: [{ name: 'PockFin Team' }],
     openGraph: {
         title: 'PockFin - Personal Finance Simulation & Education',
