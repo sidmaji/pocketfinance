@@ -10,7 +10,7 @@ export default function DemoSection() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }}>
                         <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                            See PocketFin in
+                            See PockFin in
                             <span className="bg-gradient-to-r from-emerald-700 to-teal-700 bg-clip-text text-transparent"> Action</span>
                         </h2>
                         <p className="text-xl text-gray-600 mb-8">

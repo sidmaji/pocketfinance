@@ -1,4 +1,4 @@
-# PocketFin - Personal Finance Simulation & Education Platform
+# PockFin - Personal Finance Simulation & Education Platform
 
 A comprehensive, modern web application for financial literacy education through interactive simulations and tools.
 

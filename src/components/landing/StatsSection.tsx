@@ -38,7 +38,7 @@ export default function HowItWorksSection() {
                 <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">
                     <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                         How
-                        <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent"> PocketFin Works</span>
+                        <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent"> PockFin Works</span>
                     </h2>
                     <p className="text-xl text-gray-300 max-w-3xl mx-auto">Start your financial literacy journey in four simple steps.</p>
                 </motion.div>

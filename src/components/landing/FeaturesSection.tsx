@@ -51,7 +51,7 @@ export default function FeaturesSection() {
                         <span className="bg-gradient-to-r from-emerald-700 to-teal-700 bg-clip-text text-transparent"> Master Finance</span>
                     </h2>
                     <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                        From basic budgeting to advanced investment strategies, PocketFin provides comprehensive tools for learners at every level.
+                        From basic budgeting to advanced investment strategies, PockFin provides comprehensive tools for learners at every level.
                     </p>
                 </motion.div>
 

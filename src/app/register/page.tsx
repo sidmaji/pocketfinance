@@ -71,7 +71,7 @@ export default function RegisterPage() {
 
             <div className="bg-white rounded-2xl shadow-2xl p-8 w-full max-w-md relative z-10">
                 <div className="text-center mb-8">
-                    <h1 className="text-3xl font-bold bg-gradient-to-r from-emerald-700 to-teal-700 bg-clip-text text-transparent mb-2">Join PocketFin</h1>
+                    <h1 className="text-3xl font-bold bg-gradient-to-r from-emerald-700 to-teal-700 bg-clip-text text-transparent mb-2">Join PockFin</h1>
                     <p className="text-gray-600">Start your financial literacy journey</p>
                 </div>
 

@@ -62,7 +62,7 @@ export default function RegisterPage() {
         <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 p-4">
             <div className="bg-white rounded-2xl shadow-2xl p-8 w-full max-w-md">
                 <div className="text-center mb-8">
-                    <h1 className="text-3xl font-bold gradient-text mb-2">Join PocketFin</h1>
+                    <h1 className="text-3xl font-bold gradient-text mb-2">Join PockFin</h1>
                     <p className="text-gray-600">Start your financial literacy journey</p>
                 </div>
 

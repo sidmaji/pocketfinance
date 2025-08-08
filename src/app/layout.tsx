@@ -7,19 +7,19 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'], display: 'swap' })
 
 export const metadata: Metadata = {
-    title: 'PocketFin - Personal Finance Simulation & Education',
+    title: 'PockFin - Personal Finance Simulation & Education',
     description: 'Powerful personal finance simulations and literacy for all ages. Learn through interactive experiences, plan major life events, and build wealth confidently.',
     keywords: 'finance, education, simulation, investment, budgeting, financial literacy, personal finance, retirement planning',
-    authors: [{ name: 'PocketFin Team' }],
+    authors: [{ name: 'PockFin Team' }],
     openGraph: {
-        title: 'PocketFin - Personal Finance Simulation & Education',
+        title: 'PockFin - Personal Finance Simulation & Education',
         description: 'Powerful personal finance simulations and literacy for all ages',
         type: 'website',
         locale: 'en_US',
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'PocketFin - Personal Finance Simulation & Education',
+        title: 'PockFin - Personal Finance Simulation & Education',
         description: 'Powerful personal finance simulations and literacy for all ages',
     },
     robots: 'index, follow',

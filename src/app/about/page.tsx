@@ -35,7 +35,7 @@ export default function AboutPage() {
                             <div className="bg-gradient-primary p-2 rounded-lg">
                                 <Target className="h-6 w-6 text-white" />
                             </div>
-                            <span className="text-2xl font-bold gradient-text">PocketFin</span>
+                            <span className="text-2xl font-bold gradient-text">PockFin</span>
                         </div>
                         <div className="flex space-x-4">
                             <Button variant="outline" onClick={() => (window.location.href = '/')}>
@@ -51,7 +51,7 @@ export default function AboutPage() {
                 <div className="text-center mb-16">
                     <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                         About
-                        <span className="gradient-text"> PocketFin</span>
+                        <span className="gradient-text"> PockFin</span>
                     </h1>
                     <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
                         We're on a mission to make financial literacy accessible, engaging, and practical for everyone. Through interactive simulations and comprehensive education, we empower people
@@ -63,11 +63,11 @@ export default function AboutPage() {
                     <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Mission</h2>
                     <p className="text-lg text-gray-700 leading-relaxed mb-6">
                         Financial literacy is one of the most important life skills, yet it's rarely taught effectively. Traditional financial education often feels abstract and disconnected from real
-                        life. We created PocketFin to change that.
+                        life. We created PockFin to change that.
                     </p>
                     <p className="text-lg text-gray-700 leading-relaxed">
                         Our platform combines powerful financial simulation tools with comprehensive educational content to create an engaging learning experience. Whether you're planning for
-                        retirement, buying your first home, or learning to invest, PocketFin helps you understand the impact of your decisions before you make them.
+                        retirement, buying your first home, or learning to invest, PockFin helps you understand the impact of your decisions before you make them.
                     </p>
                 </div>
 
@@ -88,7 +88,7 @@ export default function AboutPage() {
 
                 <div className="bg-gradient-to-r from-purple-500 to-blue-600 rounded-2xl p-8 text-white text-center">
                     <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Financial Future?</h2>
-                    <p className="text-purple-100 mb-6 text-lg">Join thousands of learners who are already building financial confidence with PocketFin.</p>
+                    <p className="text-purple-100 mb-6 text-lg">Join thousands of learners who are already building financial confidence with PockFin.</p>
                     <Button size="lg" variant="secondary" onClick={() => (window.location.href = '/auth/register')}>
                         Start Your Journey Today
                     </Button>

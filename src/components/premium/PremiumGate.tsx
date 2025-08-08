@@ -31,7 +31,7 @@ export default function PremiumGate({ featureId, featureName, children, userPlan
                         <Crown className="h-8 w-8 text-white" />
                     </div>
                     <h3 className="text-xl font-bold text-gray-900 mb-2">Premium Feature</h3>
-                    <p className="text-gray-600 mb-4">{featureName} is available with PocketFin Premium</p>
+                    <p className="text-gray-600 mb-4">{featureName} is available with PockFin Premium</p>
                     <div className="flex items-center justify-center space-x-2 mb-4">
                         <Sparkles className="h-4 w-4 text-purple-500" />
                         <span className="text-sm text-purple-600 font-medium">Unlock advanced features</span>

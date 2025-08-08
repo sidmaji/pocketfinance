@@ -42,7 +42,7 @@ export default function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
                             <div className="bg-gradient-primary p-2 rounded-lg">
                                 <TrendingUp className="h-6 w-6 text-white" />
                             </div>
-                            <span className="text-xl font-bold gradient-text">PocketFin</span>
+                            <span className="text-xl font-bold gradient-text">PockFin</span>
                         </div>
                         <button onClick={() => setIsOpen(false)} className="lg:hidden p-2 rounded-lg hover:bg-gray-100">
                             <X className="h-5 w-5" />

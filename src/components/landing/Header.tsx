@@ -14,7 +14,7 @@ export default function Header() {
                         <div className="bg-gradient-to-r from-emerald-600 to-teal-600 p-2 rounded-lg">
                             <TrendingUp className="h-6 w-6 text-white" />
                         </div>
-                        <span className="text-2xl font-bold bg-gradient-to-r from-emerald-700 to-teal-700 bg-clip-text text-transparent">PocketFin</span>
+                        <span className="text-2xl font-bold bg-gradient-to-r from-emerald-700 to-teal-700 bg-clip-text text-transparent">PockFin</span>
                     </div>
 
                     <nav className="hidden md:flex items-center space-x-8">

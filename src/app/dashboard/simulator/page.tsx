@@ -45,7 +45,7 @@ export default function SimulatorPage() {
         if (!results || !currentInputs) return
 
         const shareData = {
-            title: 'PocketFin Financial Simulation',
+            title: 'PockFin Financial Simulation',
             text: `I just ran a financial simulation and my projected net worth at retirement is $${results.find((r) => r.age === currentInputs.retirementAge)?.netWorth.toLocaleString()}!`,
             url: window.location.href,
         }

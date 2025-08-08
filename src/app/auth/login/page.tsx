@@ -56,7 +56,7 @@ export default function LoginPage() {
             <div className="bg-white rounded-2xl shadow-2xl p-8 w-full max-w-md relative z-10">
                 <div className="text-center mb-8">
                     <h1 className="text-3xl font-bold bg-gradient-to-r from-emerald-700 to-teal-700 bg-clip-text text-transparent mb-2">Welcome Back</h1>
-                    <p className="text-gray-600">Sign in to your PocketFin account</p>
+                    <p className="text-gray-600">Sign in to your PockFin account</p>
                 </div>
 
                 <form onSubmit={handleLogin} className="space-y-6">
